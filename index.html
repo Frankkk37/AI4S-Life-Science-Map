@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI for Life Science：14篇核心文献非线性全景图</title>
+<style>
+:root{--bg:#f5f7fa;--panel:#fff;--text:#172033;--muted:#667085;--border:#d8dee9;--accent:#2f5fd0;--accentbg:#eef4ff}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.page{max-width:1440px;margin:auto;padding:28px 22px 48px} h1{font-size:32px;margin:0 0 10px} .sub{color:var(--muted);line-height:1.7;max-width:1050px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0;color:var(--muted);font-size:12px} .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}
+.shell{overflow:auto;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(20,30,55,.08)}
+.canvas{position:relative;width:1180px;height:800px;min-width:1180px;background:linear-gradient(180deg,#fff,#fbfcfe)} svg{position:absolute;inset:0;width:1180px;height:800px}
+.life{position:absolute;width:160px;padding:12px;border:1px solid var(--border);border-radius:15px;background:#fff;text-align:center;font-weight:800;font-size:13px}
+.life small{display:block;color:var(--muted);font-size:10px;font-weight:500;margin-top:4px}
+.paper{position:absolute;width:170px;min-height:86px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:10px;text-align:left;cursor:pointer;box-shadow:0 3px 10px rgba(20,30,55,.035)}
+.paper:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(20,30,55,.08)} .paper[aria-pressed="true"]{border-color:var(--accent);background:var(--accentbg)}
+.num{font-size:10px;color:var(--muted);font-weight:800} .ptitle{font-size:12px;font-weight:800;line-height:1.25;margin-top:3px} .scale{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.3}
+.detail{margin-top:18px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 8px 28px rgba(20,30,55,.08)} .detail h2{margin:0 0 4px;font-size:20px}
+.meta{color:var(--muted);font-size:12px} .flow{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:16px 0}
+.box{border:1px solid var(--border);border-radius:12px;padding:12px;min-height:72px} .label{font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase;margin-bottom:4px}
+.arr{font-size:26px;color:var(--muted)} .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} .fact{border-top:1px solid var(--border);padding-top:9px;font-size:13px;line-height:1.55}
+.fact b{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;margin-bottom:4px} .wide{grid-column:1/-1;border:1px solid var(--border);border-radius:12px;padding:12px}
+.note{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6}
+@media(max-width:760px){.page{padding:20px 14px}h1{font-size:26px}.facts{grid-template-columns:1fr}.wide{grid-column:auto}.flow{grid-template-columns:1fr}.arr{text-align:center;transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>AI for Life Science：14篇核心文献非线性全景图</h1>
+<p class="sub">中间是生命系统本身：DNA / RNA / Protein / Cell / Organism。14篇论文不是一条线性技术路线，而是围绕不同生物尺度、跨尺度接口、实验闭环和药物研发价值分布。点击任意论文节点查看 Input、Output、Data、Task、Validation 与 Bottleneck displaced。</p>
+<div class="legend">
+<span><i class="dot" style="background:#7c3aed"></i>Genome / DNA</span>
+<span><i class="dot" style="background:#2563eb"></i>Protein / interaction</span>
+<span><i class="dot" style="background:#059669"></i>Cell / multi-omics</span>
+<span><i class="dot" style="background:#d97706"></i>Whole system / simulation</span>
+<span><i class="dot" style="background:#dc2626"></i>Physical experiment</span>
+<span><i class="dot" style="background:#475569"></i>Drug R&D / translation</span>
+</div>
+<div class="shell"><div class="canvas">
+<svg viewBox="0 0 1180 800" aria-hidden="true">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0 0L0 7L7 3.5z" fill="#aab4c4"/></marker></defs>
+<text x="590" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#172033">生命系统本身</text>
+<text x="590" y="67" text-anchor="middle" font-size="12" fill="#667085">多尺度 · 强反馈 · 非线性</text>
+<path d="M590 105C590 165 590 175 590 220C590 285 590 295 590 350C590 420 590 435 590 500C590 570 590 590 590 655" stroke="#c6ceda" stroke-width="4" fill="none" marker-end="url(#a)"/>
+<path d="M510 128C410 128 365 140 300 150M670 128C760 128 815 145 880 155M510 350C425 350 370 320 315 310M670 350C760 350 820 315 875 310M510 500C415 500 365 475 300 470M670 500C765 500 820 475 885 470" stroke="#d9dee7" stroke-width="1.6" fill="none"/>
+<path d="M590 690C590 728 470 742 355 742C245 742 190 680 190 610C190 555 230 530 305 530" stroke="#c8d1dd" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+<text x="315" y="777" font-size="12" fill="#667085">AI → Experiment → Data → AI closed loop</text>
+<path d="M675 665C820 665 915 690 1025 710" stroke="#c8d1dd" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#a)"/>
+<text x="865" y="652" font-size="12" fill="#667085">translation / decision value</text>
+</svg>
+<div class="life" style="left:510px;top:88px">DNA / Genome<small>遗传信息与调控</small></div>
+<div class="life" style="left:510px;top:205px">RNA / Regulation<small>表达与调控状态</small></div>
+<div class="life" style="left:510px;top:335px">Protein / Interaction<small>结构、功能与结合</small></div>
+<div class="life" style="left:510px;top:485px">Cell<small>动态细胞状态</small></div>
+<div class="life" style="left:510px;top:640px">Tissue → Organism<small>组织、器官与个体</small></div>
+<button class="paper" data-i="0" style="left:40px;top:45px;border-left:4px solid #d97706"><div class="num">01</div><div class="ptitle">Generalist biological AI</div><div class="scale">跨 DNA / RNA / Protein / Cell</div></button>
+<button class="paper" data-i="1" style="left:120px;top:130px;border-left:4px solid #7c3aed"><div class="num">04</div><div class="ptitle">Evo 2</div><div class="scale">Genome / DNA</div></button>
+<button class="paper" data-i="2" style="left:900px;top:130px;border-left:4px solid #7c3aed"><div class="num">05</div><div class="ptitle">AlphaGenome</div><div class="scale">DNA → regulatory function</div></button>
+<button class="paper" data-i="3" style="left:70px;top:300px;border-left:4px solid #2563eb"><div class="num">02</div><div class="ptitle">AlphaFold 2</div><div class="scale">Protein</div></button>
+<button class="paper" data-i="4" style="left:910px;top:300px;border-left:4px solid #2563eb"><div class="num">03</div><div class="ptitle">AlphaFold 3</div><div class="scale">Biomolecular complex</div></button>
+<button class="paper" data-i="5" style="left:45px;top:405px;border-left:4px solid #2563eb"><div class="num">08</div><div class="ptitle">VENUSX</div><div class="scale">Protein function</div></button>
+<button class="paper" data-i="6" style="left:235px;top:455px;border-left:4px solid #059669"><div class="num">06</div><div class="ptitle">Geneformer</div><div class="scale">Cell / gene network</div></button>
+<button class="paper" data-i="7" style="left:765px;top:455px;border-left:4px solid #059669"><div class="num">07</div><div class="ptitle">scGPT</div><div class="scale">Single-cell / multi-omics</div></button>
+<button class="paper" data-i="8" style="left:955px;top:420px;border-left:4px solid #059669"><div class="num">09</div><div class="ptitle">UCE</div><div class="scale">Cell</div></button>
+<button class="paper" data-i="9" style="left:885px;top:535px;border-left:4px solid #059669"><div class="num">10</div><div class="ptitle">Multimodal FM</div><div class="scale">Cell / Multi-omics</div></button>
+<button class="paper" data-i="10" style="left:190px;top:570px;border-left:4px solid #d97706"><div class="num">13</div><div class="ptitle">Whole-cell model</div><div class="scale">Whole cell</div></button>
+<button class="paper" data-i="11" style="left:720px;top:650px;border-left:4px solid #d97706"><div class="num">11</div><div class="ptitle">Digital Organism</div><div class="scale">Molecule → Cell → Organism</div></button>
+<button class="paper" data-i="12" style="left:45px;top:635px;border-left:4px solid #dc2626"><div class="num">12</div><div class="ptitle">Self-driving Lab</div><div class="scale">Physical experiment layer</div></button>
+<button class="paper" data-i="13" style="left:970px;top:665px;border-left:4px solid #475569"><div class="num">14</div><div class="ptitle">AI Drug Discovery</div><div class="scale">Molecule → Preclinical → Clinical</div></button>
+</div></div>
+<section class="detail" aria-live="polite">
+<h2 id="title"></h2><div class="meta" id="meta"></div>
+<div class="flow"><div class="box"><div class="label">Input</div><div id="input"></div></div><div class="arr">→</div><div class="box"><div class="label">Output</div><div id="output"></div></div></div>
+<div class="facts"><div class="fact"><b>Data</b><span id="data"></span></div><div class="fact"><b>Task</b><span id="task"></span></div><div class="fact"><b>Validation</b><span id="val"></span></div><div class="wide"><div class="label">Bottleneck displaced</div><div id="bot"></div></div></div>
+<div class="note">注：Perspective / Review / Benchmark 不是单一模型论文，因此对应字段表示其讨论或提出的系统框架，而不是假设存在一个完整模型。</div>
+</section>
+</div>
+<script>
+const papers=[
+{"n":1,"t":"Generalist biological AI","scale":"跨 DNA / RNA / Protein / Cell","input":"核酸序列、结构、图像、细胞数据","output":"跨模态表征、预测、生成与设计","data":"综述多种DNA、RNA、protein与cell数据集和模型。","task":"Predict + Generate + Integrate","val":"强调benchmark之外还需要wet-lab与in vivo验证。","bot":"减少一任务一模型、一模态一模型的碎片化。"},
+{"n":4,"t":"Evo 2","scale":"Genome / DNA","input":"超长DNA序列","output":"变异预测 + DNA / 基因组生成","data":"OpenGenome2，大规模跨物种基因组序列。","task":"Predict + Generate + Design","val":"计算benchmark + 部分生成设计实验验证。","bot":"减少variant screening与巨大DNA设计空间的实验穷举。"},
+{"n":5,"t":"AlphaGenome","scale":"DNA → regulatory function","input":"约1 Mb DNA序列","output":"表达、剪接、染色质、TF结合等功能轨迹","data":"Human/mouse genome及RNA-seq、ATAC、ChIP、Hi-C等实验数据。","task":"Predict","val":"Genome-track与variant-effect benchmark。","bot":"将一部分variant × 多readout实验转为sequence-to-function预测。"},
+{"n":2,"t":"AlphaFold 2","scale":"Protein","input":"氨基酸序列 + MSA + template","output":"蛋白质3D原子结构","data":"PDB实验结构 + sequence databases。","task":"Predict","val":"CASP14盲测及PDB结构对照。","bot":"把部分结构测定需求前移为计算预测。"},
+{"n":3,"t":"AlphaFold 3","scale":"Biomolecular complex","input":"Protein + DNA/RNA + ligand + ion等","output":"多分子复合物联合3D结构","data":"PDB复合物实验结构等。","task":"Predict","val":"PDB、PoseBusters、CASP等benchmark。","bot":"压缩docking与复合物结构搜索成本。"},
+{"n":8,"t":"VENUSX","scale":"Protein function","input":"Protein sequence / structure representation","output":"active site、binding site、motif等细粒度评分","data":"InterPro、BioLiP、SAbDab等。","task":"Evaluate / Benchmark","val":"跨family与不同序列相似度条件下系统评测。","bot":"不替代实验；替代过粗的protein-level评价方式。"},
+{"n":6,"t":"Geneformer","scale":"Cell / gene network","input":"单细胞转录组","output":"gene / cell embedding与network预测","data":"约3000万human single-cell transcriptomes。","task":"Predict + Representation + Transfer","val":"计算benchmark + 部分iPSC wet-lab验证。","bot":"减少小样本疾病中从头采集、重训和筛靶成本。"},
+{"n":7,"t":"scGPT","scale":"Single-cell / multi-omics","input":"Gene + expression + condition","output":"cell / gene embedding、perturbation response等","data":"约3300万human cells。","task":"Predict + Representation + Transfer","val":"Single-cell下游任务benchmark。","bot":"减少每个single-cell任务单独建模，并缩小perturbation实验空间。"},
+{"n":9,"t":"UCE","scale":"Cell","input":"scRNA-seq + protein embedding","output":"Universal cell embedding","data":"大规模single-cell corpus；最终嵌入3600万细胞。","task":"Representation + Transfer","val":"跨dataset、跨species、zero-shot评估。","bot":"减少新数据集反复标注、batch correction和重训。"},
+{"n":10,"t":"Multimodal FM","scale":"Cell / Multi-omics","input":"Genomics + transcriptomics + proteomics + spatial等","output":"统一cell state与跨模态 / 时序预测","data":"Perspective；提出未来所需的大规模multi-omics数据。","task":"Predict + Generate + Integrate","val":"本身不是完成模型；主张benchmark + wet-lab-in-loop。","bot":"减少不同omics各自建模后人工拼接的成本。"},
+{"n":13,"t":"Whole-cell model","scale":"Whole cell","input":"Genome annotation + reaction parameters + environment","output":"动态cell state与phenotype","data":"整合900+论文/数据库及多组学实验知识。","task":"Simulate + Predict","val":"与实验数据比较，并反向指导实验。","bot":"将部分gene knockout与过程试错前移到simulation。"},
+{"n":11,"t":"Digital Organism","scale":"Molecule → Cell → Organism","input":"Sequence、structure、omics、network、image、EHR等","output":"跨尺度预测、模拟、干预设计与patient outcome","data":"Perspective / blueprint；依赖未来多尺度多模态数据。","task":"Predict + Generate + Simulate + Program","val":"先复现known biology，再实验校准与模型迭代。","bot":"将部分跨尺度生物试错前移到in silico simulation。"},
+{"n":12,"t":"Self-driving Lab","scale":"Physical experiment layer","input":"实验目标 + 当前数据 + 仪器反馈","output":"下一项实验、参数、协议并真实执行","data":"自动化实验边做边产生数据与metadata。","task":"Optimize + Active learning + Closed loop","val":"真实机器人实验室案例。","bot":"直接压缩人工实验、条件搜索、试剂、排程和记录成本。"},
+{"n":14,"t":"AI Drug Discovery","scale":"Molecule → Preclinical → Clinical","input":"Chemical、assay、omics、animal/human data + context","output":"项目决策、PK、安全性、疗效、患者响应预测","data":"Perspective；讨论真实药物研发数据与临床转化问题。","task":"Predict + Decision support + Process optimization","val":"核心要求是验证是否真正改善decision与clinical translation。","bot":"目标是减少错误推进、无效candidate和临床失败，而非单纯提高benchmark。"}
+];
+function show(i){const p=papers[i];document.querySelectorAll('.paper').forEach((b,j)=>b.setAttribute('aria-pressed',j===i?'true':'false'));document.querySelector('#title').textContent=String(p.n).padStart(2,'0')+' · '+p.t;document.querySelector('#meta').textContent='Biological scale · '+p.scale;document.querySelector('#input').textContent=p.input;document.querySelector('#output').textContent=p.output;document.querySelector('#data').textContent=p.data;document.querySelector('#task').textContent=p.task;document.querySelector('#val').textContent=p.val;document.querySelector('#bot').textContent=p.bot}
+document.querySelectorAll('.paper').forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.i))));show(0);
+</script>
+</body></html>

